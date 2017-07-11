@@ -49,9 +49,9 @@ export const parseFeed = async rawData => {
   const parsedXml = await parseXml(rawData);
   switch (checkFeedStandard(parsedXml)) {
     case 'RSS2':
-      return parseRSS2(parsedXml.rss.channel[0].item);
+      return R.flatten(parseRSS2(parsedXml.rss.channel[0].item));
     case 'ATOM':
-      return parseATOM(parsedXml.feed.entry);
+      return R.flatten(parseATOM(parsedXml.feed.entry));
     default:
       return [];
   }
