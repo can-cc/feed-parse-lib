@@ -1,5 +1,6 @@
 name: feed-parse-lib
 git: https://github.com/fwchen/feed-parse-lib.git
 flow:
+  - install: yarn install
   - build: npm run build
   - test: nm run test
