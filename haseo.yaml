@@ -3,4 +3,4 @@ git: https://github.com/fwchen/feed-parse-lib.git
 flow:
   - install: yarn install
   - build: npm run compile
-  - test: npm run test
+  - test: npm run test2
